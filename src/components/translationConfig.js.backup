@@ -1,0 +1,657 @@
+// src/components/translationConfig.js
+// 蛋白质翻译起始过程的组件配置数据
+
+// 所有图片组件配置（按图层排序，数字越小越在上方）
+// 位置信息(x, y)应该在动画文件中指定
+export const allImageComponents = [
+  {
+    id: "00-eIF5-NTD-2",
+    label: "eIF5-NTD-2",
+    image: "00-eIF5-NTD-2.png",
+    layer: 0,
+    height: 500,
+    hoverInfo: {
+      title: "eIF5-NTD-2",
+      content: "eIF5 的 N 端结构域，参与翻译起始复合物的组装和调控。具有 GTPase 激活功能，对翻译起始过程至关重要。"
+    },
+    labelConfig: {
+      show: false,
+      position: "bottom",
+      offsetX: 0,
+      offsetY: 10,
+    }
+  },
+  {
+    id: "01-AUG-2",
+    label: "AUG-2",
+    image: "01-AUG-2.png",
+    layer: 1,
+    height: 500,
+    hoverInfo: {
+      title: "AUG",
+      content: "AUG 是蛋白质翻译的起始密码子，编码甲硫氨酸。它标志着 mRNA 上蛋白质合成的起始位点。"
+    },
+    labelConfig: {
+      show: false,
+      position: "bottom",
+      offsetX: 0,
+      offsetY: 10,
+    }
+  },
+  {
+    id: "02-eIF1A",
+    label: "eIF1A",
+    image: "02-eIF1A.png",
+    layer: 2,
+    height: 500,
+    hoverInfo: {
+      title: "eIF1A",
+      content: "Works with eIF1 to maintain the open conformation of the 40S subunit for scanning; upon start codon recognition, it stabilizes codon–anticodon interactions and assists in 60S joining."
+    },
+    labelConfig: {
+      show: false,
+      position: "bottom",
+      offsetX: 0,
+      offsetY: 10,
+    }
+  },
+  {
+    id: "03-eIF1",
+    label: "eIF1",
+    image: "03-eIF1.png",
+    layer: 3,
+    height: 500,
+    hoverInfo: {
+      title: "eIF1",
+      content: "Binds near the ribosomal decoding center and ensures start codon fidelity by preventing incorrect base-pairing during scanning; its release is triggered upon correct AUG recognition."
+    },
+    labelConfig: {
+      show: false,
+      position: "bottom",
+      offsetX: 0,
+      offsetY: 10,
+    }
+  },
+  {
+    id: "04-eIF4B",
+    label: "eIF4B",
+    image: "04-eIF4B.png",
+    layer: 4,
+    height: 500,
+    hoverInfo: {
+      title: "eIF4B",
+      content: "An auxiliary factor that enhances the helicase activity of eIF4A, particularly at the mRNA entry site of the 43S complex, facilitating the unwinding of mRNA secondary structures during scanning."
+    },
+    labelConfig: {
+      show: false,
+      position: "bottom",
+      offsetX: 0,
+      offsetY: 10,
+    }
+  },
+  {
+    id: "05-mRNA-2",
+    label: "mRNA-2",
+    image: "05-mRNA-2.png",
+    layer: 5,
+    height: 500,
+    hoverInfo: {
+      title: "mRNA",
+      content: "mRNA 携带从 DNA 转录而来的遗传信息，作为蛋白质合成的模板。它的 5' 端有帽子结构，3' 端有 poly(A) 尾巴。"
+    },
+    labelConfig: {
+      show: false,
+      position: "bottom",
+      offsetX: 0,
+      offsetY: 10,
+    }
+  },
+  {
+    id: "06-mRNA-1",
+    label: "mRNA-1",
+    image: "06-mRNA-1.png",
+    layer: 6,
+    height: 500,
+    hoverInfo: {
+      title: "mRNA",
+      content: "mRNA 携带从 DNA 转录而来的遗传信息，作为蛋白质合成的模板。它的 5' 端有帽子结构，3' 端有 poly(A) 尾巴。"
+    },
+    labelConfig: {
+      show: false,
+      position: "bottom",
+      offsetX: 0,
+      offsetY: 10,
+    }
+  },
+  {
+    id: "07-PABP",
+    label: "PABP",
+    image: "07-PABP.png",
+    layer: 7,
+    height: 500,
+    hoverInfo: {
+      title: "PABP",
+      content: "PABP 结合在 mRNA 的 3' poly(A) 尾巴上，与 5' 端的 eIF4G 相互作用，形成环状结构，增强翻译效率和 mRNA 稳定性。"
+    },
+    labelConfig: {
+      show: false,
+      position: "bottom",
+      offsetX: 0,
+      offsetY: 10,
+    }
+  },
+  {
+    id: "08-eIF4",
+    label: "eIF4",
+    image: "08-eIF4.png",
+    layer: 8,
+    height: 500,
+    hoverInfo: {
+      title: "eIF4F complex",
+      content: "A cap-binding complex composed of eIF4E, eIF4G, and eIF4A that binds the 5′ cap of mRNA and recruits the 43S complex to initiate scanning along the 5′ UTR.<br><br><b>eIF4E:</b> Cap-binding protein that specifically recognizes the 7-methylguanosine (m⁷G) cap at the 5′ end of mRNA, anchoring the eIF4F complex to the transcript.<br><br><b>eIF4G:</b> A large scaffolding protein that connects eIF4E, eIF4A, eIF3, PABP, and mRNA, bridging the 5′ and 3′ ends of the transcript to facilitate closed-loop mRNA structure and 43S recruitment.<br><br><b>eIF4A:</b> A DEAD-box RNA helicase that unwinds secondary structures in the 5′ UTR of mRNA to enable scanning by the 43S complex; functions both as part of the eIF4F complex and independently at the mRNA entry site with eIF4B."
+    },
+    labelConfig: {
+      show: false,
+      position: "bottom",
+      offsetX: 0,
+      offsetY: 10,
+    }
+  },
+  {
+    id: "09-eIF4A",
+    label: "eIF4A",
+    image: "09-eIF4A.png",
+    layer: 9,
+    height: 500,
+    hoverInfo: {
+      title: "eIF4A",
+      content: "A DEAD-box RNA helicase that unwinds secondary structures in the 5′ UTR of mRNA to enable scanning by the 43S complex; functions both as part of the eIF4F complex and independently at the mRNA entry site with eIF4B."
+    },
+    labelConfig: {
+      show: false,
+      position: "bottom",
+      offsetX: 0,
+      offsetY: 10,
+    }
+  },
+  {
+    id: "10-tRNA-name",
+    label: "tRNA-name",
+    image: "10-tRNA-name.png",
+    layer: 10,
+    height: 500,
+    hoverInfo: {
+      title: "tRNA-name",
+      content: "标记起始 tRNA 的名称和位置，用于标识携带甲硫氨酸的起始 tRNA (Met-tRNAi)。"
+    },
+    labelConfig: {
+      show: false,
+      position: "bottom",
+      offsetX: 0,
+      offsetY: 10,
+    }
+  },
+  {
+    id: "11-tRNA",
+    label: "tRNA",
+    image: "11-tRNA.png",
+    layer: 11,
+    height: 500,
+    hoverInfo: {
+      title: "Met-tRNAi",
+      content: "The initiator tRNA charged with methionine, which base-pairs with the start codon in the P site of the 40S subunit and is essential for accurate initiation and transition to the elongation phase."
+    },
+    labelConfig: {
+      show: false,
+      position: "bottom",
+      offsetX: 0,
+      offsetY: 10,
+    }
+  },
+  {
+    id: "12-eIF5-NTD",
+    label: "eIF5-NTD",
+    image: "12-eIF5-NTD.png",
+    layer: 12,
+    height: 500,
+    hoverInfo: {
+      title: "eIF5-NTD",
+      content: "The N-terminal domain of eIF5 replaces eIF1 at the ribosomal P site upon start codon recognition, stabilizing the closed conformation of the 48S complex and facilitating subunit joining."
+    },
+    labelConfig: {
+      show: false,
+      position: "bottom",
+      offsetX: 0,
+      offsetY: 10,
+    }
+  },
+  {
+    id: "13-eIF5-CTD",
+    label: "eIF5-CTD",
+    image: "13-eIF5-CTD.png",
+    layer: 13,
+    height: 500,
+    hoverInfo: {
+      title: "eIF5-CTD",
+      content: "The C-terminal domain of eIF5 interacts with eIF3c and components of the ternary complex near the decoding center, contributing to start codon recognition and 43S complex stabilization."
+    },
+    labelConfig: {
+      show: false,
+      position: "bottom",
+      offsetX: 0,
+      offsetY: 10,
+    }
+  },
+  {
+    id: "14-GTP",
+    label: "GTP",
+    image: "14-GTP.png",
+    layer: 14,
+    height: 500,
+    hoverInfo: {
+      title: "GTP",
+      content: "GTP (guanosine triphosphate) is an energy carrier molecule that binds to eIF2 and is essential for ternary complex formation and translation initiation."
+    },
+    labelConfig: {
+      show: false,
+      position: "bottom",
+      offsetX: 0,
+      offsetY: 10,
+    }
+  },
+  {
+    id: "15-eIF2",
+    label: "eIF2",
+    image: "15-eIF2.png",
+    layer: 15,
+    height: 500,
+    hoverInfo: {
+      title: "eIF2",
+      content: "A GTPase that forms a ternary complex with GTP and Met-tRNAi<sup>Met</sup>; it delivers the initiator tRNA to the P site of the 40S subunit and undergoes GTP hydrolysis upon start codon recognition, enabling release and transition to elongation."
+    },
+    labelConfig: {
+      show: false,
+      position: "bottom",
+      offsetX: 0,
+      offsetY: 10,
+    }
+  },
+  {
+    id: "16-40s",
+    label: "40s",
+    image: "16-40s.png",
+    layer: 16,
+    height: 500,
+    hoverInfo: {
+      title: "40S",
+      content: "Serves as the platform for the 43S pre-initiation complex; it binds initiation factors and the ternary complex, scans the 5′ UTR of mRNA, and positions the start codon in its P site for accurate translation initiation."
+    },
+    labelConfig: {
+      show: false,
+      position: "bottom",
+      offsetX: 0,
+      offsetY: 10,
+    }
+  },
+  {
+    id: "17-eIF3",
+    label: "eIF3",
+    image: "17-eIF3.png",
+    layer: 17,
+    height: 500,
+    hoverInfo: {
+      title: "eIF3",
+      content: "A large multi-subunit complex that scaffolds the 43S pre-initiation complex, stabilizes ternary complex binding, facilitates recruitment of the ribosome to mRNA, and bridges ribosome recycling to a new round of initiation."
+    },
+    labelConfig: {
+      show: false,
+      position: "bottom",
+      offsetX: 0,
+      offsetY: 10,
+    }
+  },
+  {
+    id: "18-eEFs",
+    label: "eEFs",
+    image: "18-eEFs.png",
+    layer: 18,
+    height: 500,
+    hoverInfo: {
+      title: "eEFs (Eukaryotic Elongation Factors)",
+      content: "eEFs drive the elongation phase of translation by coordinating tRNA delivery and ribosomal movement. Specifically, eEF1A delivers aminoacyl-tRNAs to the A site in a GTP-dependent manner, ensuring correct codon–anticodon pairing, while eEF2 catalyzes ribosomal translocation along the mRNA after peptide bond formation, using energy from GTP hydrolysis to shift the tRNAs and mRNA by one codon."
+    },
+    labelConfig: {
+      show: false,
+      position: "bottom",
+      offsetX: 0,
+      offsetY: 10,
+    }
+  },
+  {
+    id: "19-eIF5B",
+    label: "eIF5B",
+    image: "19-eIF5B.png",
+    layer: 19,
+    height: 500,
+    hoverInfo: {
+      title: "eIF5B",
+      content: "eIF5B is a GTPase that promotes the joining of the 60S subunit by remodeling the 48S complex and positioning the Met-tRNAi<sup>Met</sup> into the peptidyl transferase center. Upon GTP hydrolysis, it facilitates the release of eIF1A and itself, finalizing 80S assembly and allowing translation elongation to begin."
+    },
+    labelConfig: {
+      show: false,
+      position: "bottom",
+      offsetX: 0,
+      offsetY: 10,
+    }
+  },
+  {
+    id: "20-60s",
+    label: "60s",
+    image: "20-60s.png",
+    layer: 20,
+    height: 500,
+    hoverInfo: {
+      title: "60S",
+      content: "The 60S subunit joins the 48S complex after start codon recognition to form the functional 80S initiation complex. This joining marks the transition from initiation to elongation and requires proper positioning of Met-tRNAi<sup>Met</sup> to avoid steric clashes."
+    },
+    labelConfig: {
+      show: false,
+      position: "bottom",
+      offsetX: 0,
+      offsetY: 10,
+    }
+  },
+];
+
+// 拖放练习模式配置 - 每个步骤需要的组件
+export const dragDropSteps = [
+//   {
+//     id: "eIF3",
+//     label: "eIF3",
+//     image: "1_eIF_3_1_1A.png",
+//     start: { x: 50, y: -50 }, // 开始在上面
+//     end: { x: 50, y: 50 },   // 移到 40s 上面
+//     height: 500,
+//     hoverInfo: {
+//       title: "真核起始因子 3 (eIF3)",
+//       content: "eIF3 是最大的真核起始因子复合物，含有多个亚基。它在翻译起始中起关键作用，帮助招募 mRNA 并稳定 40S 核糖体亚基。"
+//     },
+//     labelConfig: {
+//       show: false,
+//       position: "bottom",  // "top", "bottom", "left", "right"
+//       offsetX: 200,
+//       offsetY: -200,
+//     }
+//   },
+//   {
+//     id: "40s",
+//     label: "40S",
+//     image: "1_40s.png",
+//     start: { x: 50, y: 50 }, // 开始在中间
+//     end: { x: 50, y: 50 },   // 不动
+//     height: 500,
+//     hoverInfo: {
+//       title: "40S 核糖体小亚基",
+//       content: "40S 是真核生物核糖体的小亚基，负责结合 mRNA 并识别起始密码子 AUG。它与多种起始因子结合形成翻译起始复合物。"
+//     },
+//     labelConfig: {
+//       show: false,
+//       position: "bottom",
+//       offsetX: 0,
+//       offsetY: -100,
+//     }
+//   },
+// ];
+
+// export const complex1 = {
+//   id: "complex1",
+//   label: "43S Pre-initiation Complex",
+//   image: "1_complex1.png",
+//   x: 50,   // 在 40s 原来的位置
+//   y: 50,
+//   height: 500,
+//   hoverInfo: {
+//     title: "43S 预起始复合物",
+//     content: "由 40S 核糖体小亚基、eIF3、eIF1、eIF1A 等因子组成的复合物。这是翻译起始的关键中间产物，准备扫描 mRNA 寻找起始密码子。"
+//   },
+//   labelConfig: {
+//     show: false,
+//     position: "bottom",
+//     offsetX: 0,
+//     offsetY: 10,
+//   }
+// };
+
+// export const eIF2 = {
+//   id: "eIF2",
+//   label: "eIF2-GTP",
+//   image: "1_eIF2.png",
+//   x: 250,   // 在右侧
+//   y: 50,
+//   height: 500,
+//   labelConfig: {
+//     show: false,
+//     position: "bottom",
+//     offsetX: 0,
+//     offsetY: 10,
+//   }
+// };
+
+// export const tRNA = {
+//   id: "tRNA",
+//   label: "Met-tRNAi",
+//   image: "1_tRNA.png",
+//   start: { x: 350, y: 50 },   // 开始位置(右侧)
+//   end: { x: 250, y: 50 },       // 移动到 eIF2 位置
+//   height: 500,
+//   labelConfig: {
+//     show: false,
+//     position: "bottom",
+//     offsetX: 0,
+//     offsetY: 10,
+//   }
+// };
+
+// // export const eIF2tRNA = {
+// //   id: "eIF2_tRNA",
+// //   label: "eIF2-GTP-Met-tRNAi",
+// //   image: "1_eIF2_tRNA.png",
+// //   x: 150,   // 在右侧
+// //   y: 200,
+// //   height: 80,
+// //   hoverInfo: {
+// //     title: "eIF2-GTP-Met-tRNAi 三元复合物",
+// //     content: "由 eIF2、GTP 和携带甲硫氨酸的起始 tRNA 组成的复合物。它将第一个氨基酸带入核糖体，用于蛋白质合成的起始。"
+// //   },
+// //   labelConfig: {
+// //     show: true,
+// //     position: "bottom",
+// //     offsetX: 0,
+// //     offsetY: 10,
+// //   }
+// // };
+
+// export const complex2 = {
+//   id: "complex2",
+//   label: "48S Initiation Complex",
+//   image: "1_complex2.png",
+//   x: 250,   // 在 eIF2 同一位置
+//   y: 50,
+//   height: 500,
+//   moveToX: 50,  // Step 5 移动的终点 X 坐标
+//   hoverInfo: {
+//     title: "48S 起始复合物",
+//     content: "43S 复合物与 eIF2-GTP-Met-tRNAi 结合后形成的复合物。此时，起始 tRNA 已经定位在 40S 的 P 位点，准备识别 mRNA 上的 AUG 密码子。"
+//   },
+//   labelConfig: {
+//     show: false,
+//     position: "bottom",
+//     offsetX: 0,
+//     offsetY: 10,
+//   }
+// };
+
+// export const eIF5 = {
+//   id: "eIF5",
+//   label: "eIF5",
+//   image: "1_eIF5.png",
+//   x: 450,   // 在 complex2 右侧
+//   y: 50,
+//   height: 500,
+//   moveToX: 50,  // Step 5 移动的终点 X 坐标
+//   hoverInfo: {
+//     title: "真核起始因子 5 (eIF5)",
+//     content: "eIF5 是一个 GTPase 激活蛋白，促进 eIF2 结合的 GTP 水解。这一步骤对于起始因子的释放和 60S 大亚基的结合至关重要。"
+//   },
+//   labelConfig: {
+//     show: false,
+//     position: "bottom",
+//     offsetX: 0,
+//     offsetY: 10,
+//   }
+// };
+
+// export const final43s = {
+//   id: "43s",
+//   label: "80S Initiation Complex",
+//   image: "1_43s.png",
+//   x: 50,   // 在 40s 的位置
+//   y: 50,
+//   height: 500,
+//   hoverInfo: {
+//     title: "80S 起始复合物",
+//     content: "完整的核糖体（40S + 60S）结合在 mRNA 的起始密码子上，Met-tRNAi 位于 P 位点。翻译起始完成，准备进入延伸阶段。"
+//   },
+//   labelConfig: {
+//     show: false,
+//     position: "bottom",
+//     offsetX: 0,
+//     offsetY: 10,
+//   }
+// };
+
+// export const eIF4AB = {
+//   id: "eIF4AB",
+//   label: "eIF4A/4B",
+//   image: "2_eIF_4_A_B.png",
+//   x: 350,   // 在 43s 右侧
+//   y: 200,
+//   height: 100,
+//   hoverInfo: {
+//     title: "eIF4A/4B 复合物",
+//     content: "eIF4A 是一个 RNA 解旋酶，eIF4B 是辅助因子。它们帮助解开 mRNA 的二级结构，促进核糖体扫描和结合。"
+//   },
+//   labelConfig: {
+//     show: true,
+//     position: "bottom",
+//     offsetX: 0,
+//     offsetY: 10,
+//   }
+// };
+
+// export const final48s = {
+//   id: "48s_final",
+//   label: "48S Initiation Complex at mRNA",
+//   image: "2_48s.png",
+//   x: 230,   // 在 eIF4F 的位置
+//   y: 480,
+//   height: 180,
+//   hoverInfo: {
+//     title: "48S 起始复合物（mRNA 结合）",
+//     content: "完整的 48S 起始复合物已经定位在 mRNA 上，与 eIF4F 结合，准备开始扫描寻找起始密码子。"
+//   },
+//   labelConfig: {
+//     show: true,
+//     position: "bottom",
+//     offsetX: 0,
+//     offsetY: 10,
+//   }
+// };
+
+// // mRNA 相关组件（下方）
+// export const mRNAComponents = {
+//   mRNA: {
+//     id: "mRNA",
+//     label: "mRNA",
+//     image: "mrna1.png",
+//     x: 150,
+//     y: 250,
+//     height: 500,
+//     labelConfig: {
+//       show: false,
+//       position: "bottom",
+//       offsetX: 0,
+//       offsetY: 10,
+//     }
+//   },
+//   eIF4F: {
+//     id: "eIF4F",
+//     label: "eIF4F complex",
+//     image: "2_eIF4F.png",
+//     x: 230,
+//     y: 480,
+//     height: 150,
+//     hoverInfo: {
+//       title: "eIF4F 复合物",
+//       content: "由 eIF4E、eIF4A 和 eIF4G 组成的复合物。eIF4E 识别并结合 mRNA 的 5' m7G 帽子结构，eIF4A 是一个 RNA 解旋酶，eIF4G 是支架蛋白。"
+//     },
+//     labelConfig: {
+//       show: true,
+//       position: "bottom",
+//       offsetX: 0,
+//       offsetY: 10,
+//     }
+//   },
+// };
+
+// // 步骤描述
+// export const stepDescriptions = [
+//   "初始状态 - eIF3 在上面，40S 在中间",
+//   "eIF3 移动到 40S 上面并形成 Complex1",
+//   "eIF2 和 tRNA 出现",
+//   "tRNA 移动到 eIF2，然后消失，Complex2 出现",
+//   "eIF5 出现",
+//   "三个组件向左移动并消失，形成 43S",
+//   "eIF4F 结合到 mRNA",
+//   "eIF4A/4B 出现在 43S 右侧",
+//   "43S 和 eIF4A/4B 移动到 mRNA，形成 48S",
+// ];
+
+// 拖放练习模式配置 - 每个步骤需要的组件
+export const dragDropSteps = [
+  {
+    stepNumber: 0,
+    description: "Place eIF3 and 40S to correct positions",
+    requiredComponents: ["eIF3", "40s"],
+    slots: [
+      { id: "slot-eIF3", x: 180, y: 160, width: 150, height: 150, label: "eIF3" },
+      { id: "slot-40s", x: 180, y: 260, width: 150, height: 150, label: "40S" }
+    ]
+  },
+  {
+    stepNumber: 1,
+    description: "Place eIF2 and tRNA to correct positions",
+    requiredComponents: ["eIF2", "tRNA"],
+    slots: [
+      { id: "slot-eIF2", x: 550, y: 260, width: 150, height: 150, label: "eIF2" },
+      { id: "slot-tRNA", x: 650, y: 260, width: 150, height: 150, label: "tRNA" }
+    ]
+  },
+  {
+    stepNumber: 2,
+    description: "Place eIF5 to correct position",
+    requiredComponents: ["eIF5"],
+    slots: [
+      { id: "slot-eIF5", x: 750, y: 260, width: 150, height: 150, label: "eIF5" }
+    ]
+  }
+];
+
+// 所有可用的拖放组件
+export const allDragComponents = [
+  { id: "eIF3", label: "eIF3", image: "17-eIF3.png", height: 120, description: "eIF3 binds to the 40S ribosomal subunit" },
+  { id: "40s", label: "40S", image: "16-40s.png", height: 120, description: "40S ribosomal subunit" },
+  { id: "eIF2", label: "eIF2", image: "15-eIF2.png", height: 120, description: "eIF2 forms ternary complex with GTP and tRNA" },
+  { id: "tRNA", label: "tRNA", image: "11-tRNA.png", height: 120, description: "Initiator tRNA" },
+  { id: "eIF5", label: "eIF5", image: "13-eIF5-CTD.png", height: 120, description: "eIF5 helps with start codon recognition" },
+];
