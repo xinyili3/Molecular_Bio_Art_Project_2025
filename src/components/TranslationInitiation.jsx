@@ -5,6 +5,7 @@ import React from "react";
 import {
   allImageComponents,
 } from "./translationConfig";
+import CelebrationPage from "./CelebrationPage";
 
 // 简化的图片显示组件
 function ImageWithLabel({ 
@@ -110,9 +111,10 @@ function ImageWithLabel({
   );
 }
 
-export default function TranslationInitiation() {
+export default function TranslationInitiation({ onToggleMode, currentMode, geneName }) {
   const [selectedComponent, setSelectedComponent] = useState(null);
   const [animationStep, setAnimationStep] = useState(0);
+  const [showCelebration, setShowCelebration] = useState(false);
   
   // 定义初始位置
   const initialPositions = {
@@ -495,7 +497,15 @@ export default function TranslationInitiation() {
 
   // 下一步
   const nextStep = () => {
-    setAnimationStep(prev => prev + 1);
+    const nextStepNum = animationStep + 1;
+    setAnimationStep(nextStepNum);
+    
+    // 如果到达 Step 12 (第13步，索引为12)，显示庆祝页面
+    if (nextStepNum === 12 && geneName) {
+      setTimeout(() => {
+        setShowCelebration(true);
+      }, 1500); // 延迟1.5秒显示，让动画完成
+    }
   };
 
   // 上一步
@@ -506,6 +516,12 @@ export default function TranslationInitiation() {
   // 重置
   const reset = () => {
     setAnimationStep(0);
+    setShowCelebration(false);
+  };
+
+  // 重新开始（回到欢迎页）
+  const handleRestart = () => {
+    window.location.reload();
   };
 
   return (
@@ -560,6 +576,18 @@ export default function TranslationInitiation() {
       </div>
 
       <div className="flex-1 relative overflow-hidden">
+        {/* 模式切换按钮 */}
+        {onToggleMode && (
+          <div className="absolute top-4 right-8 z-50">
+            <button
+              onClick={onToggleMode}
+              className="bg-gradient-to-r from-gray-700 to-gray-600 hover:from-gray-800 hover:to-gray-700 text-white px-6 py-3 rounded-lg shadow-lg transition transform hover:scale-105 font-medium"
+            >
+              Interactive
+            </button>
+          </div>
+        )}
+
         {/* 控制按钮 */}
         <div className="absolute bottom-8 right-8 flex gap-4 z-50">
           <button 
@@ -844,6 +872,17 @@ export default function TranslationInitiation() {
           </div>
         </div>
       </div>
+
+      {/* 庆祝页面 */}
+      <AnimatePresence>
+        {showCelebration && (
+          <CelebrationPage
+            geneName={geneName}
+            onClose={() => setShowCelebration(false)}
+            onRestart={handleRestart}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 }
