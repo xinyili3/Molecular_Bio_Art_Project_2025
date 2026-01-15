@@ -42,8 +42,8 @@ xinyi_ATAC
 ```bash
 pip install caper
 caper init slurm
-(xinyi_ATAC) [xli51@bridges2-login014 ATAC-seq]$ vim default.conf
-(xinyi_ATAC) [xli51@bridges2-login014 ATAC-seq]$ cat default.conf
+
+vi ~/.caper/default.conf
 slurm-partition = RM-shared
 ```
 
@@ -183,3 +183,4 @@ find . -name metadata.json
 croo ./atac/d5db63ca-d996-4c45-99e6-16f27c39a69f/metadata.json
 ```
 
+Delete useless folders and update lab datasets
